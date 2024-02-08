@@ -1,6 +1,6 @@
-public double size = 400;
-public double cont = 0;
-public int numCopies = 10;
+double size = 400;
+double cont = 0;
+int numCopies = 10;
 
 void setup(){
   size(700,700);
@@ -9,12 +9,9 @@ void setup(){
 void draw(){
   background(0);
   cont += PI/180/2;
-  //sierpinski((float)(350-size/2),(float)(350-size/2),(float)(size));
   for (int i = 0; i <= 200; i+=50){
     sierpinski((float)(350-(size/2*(i)/200) + i*cos(cont)),(float)(350-(size/2*(i)/200)+ i*sin(cont)),(float)(size*(i)/200));
   }
-  //sierpinski((float)(350-size/2 + 10*cos(cont)),(float)(350-size/2+ 10*sin(cont)),(float)(size));
-  //copyT((float)(350-size/2),(float)(350-size/2),(float)(size),10);
 }
 
 public void copyT(float x,float y,float len,int n){
@@ -26,12 +23,8 @@ public void copyT(float x,float y,float len,int n){
 }
 
 public void sierpinski(float x, float y, float len) {
-  //x = Math.abs(x);
-  //y = Math.abs(y);
-  //len = Math.abs(len);
   if (len <= 10){
     triangle(x,y,x+len,y,x+len/2,y+len);
-    //rect(x,y,len,len);
   }else{
     fill(0);
     stroke(255);
