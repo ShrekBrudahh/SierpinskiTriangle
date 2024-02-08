@@ -20,7 +20,6 @@ void draw(){
 public void copyT(float x,float y,float len,int n){
   if (n <=0){
     sierpinski(x,y,len);
-    println("copied");
   }else{
     copyT((float)(x + n*cos(cont)),(float)(y + n*sin(cont)),len,n-1);
   }
