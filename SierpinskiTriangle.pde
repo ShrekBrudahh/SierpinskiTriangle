@@ -2,11 +2,11 @@ public double size = 400;
 public double cont = 0;
 public int numCopies = 10;
 
-public void setup(){
+void setup(){
   size(700,700);
 }
 
-public void draw(){
+void draw(){
   background(0);
   cont += PI/180/2;
   //sierpinski((float)(350-size/2),(float)(350-size/2),(float)(size));
